@@ -1,0 +1,613 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@font-face {
+font-family: 'dekar';
+src: url('/assets/Dekar.eot');
+src:local(※), 
+	url('/assets/Dekar.woff') format('woff');
+}
+@font-face {
+font-family: 'dekarlight';
+src: url('/assets/Dekar-Light.eot');
+src:local(※), 
+	url('/assets/Dekar Light.woff') format('woff');
+}
+// 인트로 페이지
+// nav 바 //
+.normal-font{
+	font-family: dekar;
+	font-weight: normal;
+}
+.light-font{
+	font-family: dekarlight;
+	font-weight: normal;
+}
+.head {
+    position:relative;
+    height:7%;
+    width:100%;
+    white-space:nowrap;
+}
+.title {
+    display:inline-block;
+    width:100%;
+    text-align:center;
+    max-height:60px;
+    vertical-align: middle !important;
+    img {
+        height:80px;
+        width:auto;
+        vertical-align: top;
+        box-sizing: border-box;
+    }
+}
+
+.nav {
+    width:100%;
+    height:50px;
+    border-bottom:1px solid #c0c0c0;
+    margin-top:40px;
+    text-align:center;
+    a {
+        display:inline-block;
+        width:90px;
+        color:black;
+        font-size:18px;
+        box-sizing:border-box;
+    }
+}
+
+
+
+
+// 메인페이지
+.big_pic {
+    img {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    }
+}
+.big_pic:hover {
+    img {
+        -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+    
+    }
+}
+.mainpage {
+    width:100%;
+    position:relative;
+    margin-top:80px;
+}
+.main_pic1 {
+    float:left;
+    width:28%;
+    height:600px;
+    display:inline-block;
+    margin-left:1%;
+}
+
+.main_pic2 {
+    width:16%;
+    float:left;
+    margin-left:1%;
+    display:inline-block;
+    height:280px;
+}
+
+.main_pic3 {
+    width:67%;
+    float:left;
+    margin-left:1%;
+    display:inline-block;
+    margin-top:20px;
+    height:300px;
+}
+// 메인페이지 끝
+// 아티스트 시작
+
+.main_title {
+    width:100%;
+    margin-top:-50px;
+    h2 {
+        text-align:center;
+    }
+}
+.main_content {
+    width:100%;
+    margin-top:10px;
+    position:relative;
+    display:inline-block;
+    .each_artist {
+        width:23%;
+        margin-left:1%;
+        margin-top:50px;
+        height:270px;
+        float:left;
+        display:inline-block;
+        img {
+            width:100%;
+            height:250px;
+        }
+        h3 {
+            font-size:14px;
+            color:black;
+        }
+    }
+}
+// 아티스트 끝
+// 아티스트 세부
+.gallery {
+    width:100%;
+    min-height:60vh;
+    height:auto;
+    border-bottom:1px solid #c0c0c0;
+    padding-bottom:30px;
+    display:inline-block;
+}
+.each_art {
+    display:inline-block;
+    position:relative;
+    width:22%;
+    margin-left:1%;
+    height:250px;
+    float:left;
+    text-align:center;
+    margin-top:20px;
+    a {
+        text-align:center;
+    img {
+        width:auto;
+        max-width:100%;
+        height:250px;
+    }
+    }
+}
+.bio {
+    width:100%;
+    min-height:30vh;
+    height:auto;
+    padding-bottom:50px;
+    border-bottom:1px solid #c0c0c0;
+}
+
+.sub_title {
+    margin-top:50px;
+    width:100%;
+    text-align:center;
+}
+.bio_content {
+    margin-top:50px;
+}
+
+.artist_exhi {
+    width:100%;
+    min-height:30vh;
+    height:auto;
+}
+.artist_exhi_div {
+    width:100%;
+    min-height:60vh;
+    height:auto;
+    display:inline-block;
+}
+.artist_exhi_each {
+    display:inline-block;
+    width:22%;
+    margin-left:1%;
+    margin-top:20px;
+    color:black;
+    float:left;
+    position:relative;
+    height:300px;
+     p {
+         text-align:center;
+         padding-top:5px;
+     }
+     .artist_exhi_each_pic {
+     float:left;
+     display:inline-block;
+     position:relative;
+     height:250px;
+     img {
+         width:100%;
+         height:350px;
+     }
+     }
+}
+// 아티스트 세부 끝
+// footer 
+
+.foot {
+    margin-top:50px;
+    border-top:1px solid #c0c0c0;
+    width:100%;
+    padding-top:50px;
+    padding-bottom:50px;
+    height:150px;
+}
+.foot_copy {
+    margin-top:15px;
+    width:100%;
+    text-align:center;
+}
+
+// footer 끝
+
+// exhibition 시작
+
+.exhi_menu {
+    width:100%;
+    height:70px;
+    text-align:center;
+    a {
+     display:inline-block;
+     box-sizing:border-box;
+     width:100px;
+     color:black;
+     padding-top:5px;
+    }
+}
+.exhi_content {
+    width:100%;
+    height:auto;
+    display:inline-block;
+    min-height:60vh;
+}
+
+// exhibition 끝
+
+// about 
+
+.about1 {
+    width:75%;
+    min-height:40vh;
+    height:auto;
+    margin-top:30px;
+    display:inline-block;
+    margin-left:1%;
+    p{
+    display:inline-block;
+    box-sizing:border-box;
+    line-height:2.5em;
+    width:90%;
+    }
+}
+.about1_img {
+    width:22%;
+    min-height:40vh;
+    height:auto;
+    position:relative;
+    top:-50px;
+    display:inline-block;
+    img {
+        width:100%;
+        border-radius:5px;
+    }
+}
+
+
+// art_detail 시작
+.art_pic {
+    margin-left:auto;
+    margin-right:auto;
+    width:90%;
+    text-align:center;
+    height:500px;
+    margin-top:50px;
+    img {
+        margin-left:auto;
+        margin-right:auto;
+        text-align:center;
+        position:relative;
+    }
+}
+.art_describe {
+    float:left;
+    position:relative;
+    margin-top:20px;
+    text-align:left;
+}
+// art_detail 끝
+
+ // 게시판 
+    .table {
+        width:100%;
+        text-align:center;
+    }
+    .table_head_row {
+        text-align:center;
+        background-color:#C0C0C0;
+        height:40px;
+    }
+    .table_head_num {
+        width:10%;
+         text-align:center;
+    }
+    .table_head_title {
+        width:65%;
+         text-align:center;
+    }
+    .table_head_day {
+        width:10%;
+         text-align:center;
+    }
+    .table_con_row {
+        text-align:center;
+        background-color:white;
+        height:40px;
+        border-bottom:1px solid #c0c0c0;
+    }
+    // 관리자 페이지 
+.admin_btn {
+    width:22%;
+    margin-left:1%;
+    margin-right:1%;
+    height:100px;
+    border:1px solid #c0c0c0;
+    text-align:center;
+    a { 
+        color:black;
+    }
+    padding-top:40px;
+    display:inline-block;
+}
+.admin_subtitle {
+    padding-top:30px;
+    height:60px;
+}
+//  관리자 페이지 끝
+
+  // inquire 시작
+    
+    .inquire_div {
+        width:50%;
+        margin-left:25%;
+        margin-right:25%;
+        height:700px;
+        background-color:white;
+    }
+    .inquire_name {
+        background-color:white;
+        width:100%;
+        height:60px;
+        font-size:20px;
+        border:1px solid #c0c0c0;
+    }
+    .inquire_file {
+        background-color:white;
+        width:100%;
+        padding-top:10px;
+        padding-left:10px;
+        height:60px;
+        font-size:20px;
+        border:1px solid #c0c0c0;
+    }
+    .inquire_content {
+        width:100%;
+        height:300px;
+        font-size:20px;
+    }
+    // inquire 종료
+    
+    
+    // 아티스트 입력 
+    .mir_input_file {
+        background-color:white;
+        width:100%;
+        height:60px;
+        font-size:20px;
+        border:1px solid #c0c0c0;
+    }
+    .mir_input_div {
+        width:70%;
+        margin-top:50px;
+        margin-left:15%;
+        margin-right:15%;
+        height:700px;
+    }
+    .mir_input1 {
+        background-color:white;
+        width:100%;
+        height:60px;
+        font-size:20px;
+        border:1px solid #c0c0c0;
+    }
+    .mir_input2 {
+        width:100%;
+        height:300px;
+        font-size:20px;
+    }
+    // 아티스트 입력 종료
+    
+    // 행사 입력 
+    
+    .date_mir {
+        width:50%;
+        margin-top:10px;
+        float:right;
+        position:relative;
+    }
+    .date_title {
+        width:40%;
+        position:relative;
+        float:left;
+        font-size:10px;
+        padding:3px 4px;
+    }
+    
+    
+    // 뉴스 디테일
+      .detail_title {
+    width:80%;
+    margin-left:auto;
+    background-color:#f2f2f2;
+    margin-right:auto;
+    height:50px;
+    padding-top:1px;
+    text-align:center;
+    h3 {
+        font-size:20px;
+    }
+    }
+    .detail_day {
+    padding-left:15px;
+    height:50px;
+    width:80%;
+    padding-top:10px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+    }
+     .detail_content {
+    margin-top:30px;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    min-height:600px;
+    height:auto;
+        .detail_p {
+            width:80%;
+            display:block;
+            margin-top:50px;
+            text-align:left;
+            margin-left:auto;
+            margin-right:auto;
+        p{
+            width:100%;
+            display:block;
+            font-size:14px;
+        }
+        }
+         img {
+         width:65%;
+         display:block;
+         margin-left:auto;
+         margin-right:auto;
+         }
+    }
+    // 뉴스 디테일 끝
+    
+    // 페이지네이션
+    
+    .pagination_div {
+    text-align: center;
+}
+    .current {
+        display: inline-block;
+        font-size: 16px;
+        text-decoration: none;
+        padding-top:10px;
+        font-weight: bold;
+        display:inline-block;
+        box-sizing: border-box;
+        width:40px;
+        height:40px;
+        background-color: white;
+        border-radius:3px;
+        border:0.5px solid #BDBDBD;
+        color: #2f609c;
+        font-style: normal;
+    }
+    .pagination a {
+        color:#cccccc !important;
+        font-size:16px;
+        font-style: normal;
+        border-radius:3px;
+        display:inline-block;
+        box-sizing: border-box;
+        width:40px;
+        padding-top:10px;
+        border:0.5px solid #BDBDBD;
+        background-color: white;
+        height:40px;
+    }
+
+    .pagination_links a{
+        display:none;
+    }
+    .next_page,.previous_page{
+        color:#cccccc !important;
+        font-size:16px;
+        font-style: normal;
+        border-radius:3px;
+        display:inline-block;
+        box-sizing: border-box;
+        width:40px;
+        padding-top:10px;
+        border:0.5px solid #BDBDBD;
+        background-color: white;
+        height:40px;
+    }
+    .pagination_links{
+        text-align: center;
+    }
+    .previous_page.disabled, .next_page.disabled{
+        display: none !important;
+    }
+    .pagination_links a{
+        text-decoration: none;
+    }
+    .pagination_links a:hover{
+        text-decoration: underline;
+    }
+    .pagination_links span{
+        text-decoration: none;
+        display: inline-block;
+        color: #000000;
+    }
+@media all and (max-width : 420px) {
+.current {
+        display: inline-block;
+        font-size: 12px;
+        text-decoration: none;
+        padding-top:5px;
+        font-weight: bold;
+        display:inline-block;
+        box-sizing: border-box;
+        width:25px;
+        height:25px;
+        background-color: white;
+        border-radius:3px;
+        border:0.5px solid #BDBDBD;
+        color: #2f609c;
+        font-style: normal;
+    }
+    .pagination a {
+        color:#cccccc !important;
+        font-size:12px;
+        font-style: normal;
+        border-radius:3px;
+        display:inline-block;
+        box-sizing: border-box;
+        width:25px;
+        padding-top:5px;
+        border:0.5px solid #BDBDBD;
+        background-color: white;
+        height:25px;
+    }
+     .next_page,.previous_page{
+        color:#cccccc !important;
+        font-size:12px;
+        font-style: normal;
+        border-radius:3px;
+        display:inline-block;
+        box-sizing: border-box;
+        width:25px;
+        padding-top:5px;
+        border:0.5px solid #BDBDBD;
+        background-color: white;
+        height:25px;
+    }
+    .pagination_div {
+        margin-top:-5px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,23 @@
+<div class="container" style="height:1100px; margin-top:70px;">
+    <div class="main_title normal-font">
+        <h2>NEWS 수정</h2>
+    </div>
+    <div class="inquire_div">
+      <form action= "/home/news_edit_com/<%=@gongmos.id%>" method= "POST"  enctype="multipart/form-data" accept-charset="UTF-8">
+           <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <div class="inquire_name">
+            <input type="text" value="<%=@gongmos.title%>" placeholder="제목을 입력해주세요" style="padding-left:10px;" class="inquire_name" name="title">
+        </div>
+        <div class="inquire_name">
+            <input type="text" value="<%=@gongmos.title_c%>" placeholder="중문 제목을 입력해주세요" style="padding-left:10px;" class="inquire_name" name="title_c">
+        </div>
+        <div class="inquire_content">
+            <textarea rows="10" placeholder="내용을 입력해주세요" style="padding-left:10px;" class="inquire_content" name="content"><%=@gongmos.content%></textarea>
+        </div>
+        <div class="inquire_content">
+            <textarea rows="10" placeholder="중문 내용을 입력해주세요" style="padding-left:10px;" class="inquire_content" name="content_c"><%=@gongmos.content_c%></textarea>
+        </div>
+        <button type="submit" class="btn btn-success" style="margin:10px auto"> 수정하기</button>
+      </form>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container" style="margin-top:60px;min-height:100vh;">
+    <div class="main_title normal-font">
+        <h2 style="text-align:left;">ARTISTS</h2>
+    </div>
+    <div class="main_content">
+        <% @artist.each do |a| %>
+        <div class="each_artist">
+             <a href="/home/artist_detail/<%=a.id%>">
+             <%= image_tag a.title_pic %>
+             <h3><%=a.name%></h3>
+             </a>
+        </div>
+        <% end %>
+         
+    </div>
+    <div class="pagination_div"><%= will_paginate @artist, :previous_label => t("<<"), :next_label => t(">>")%></div>
+</div>

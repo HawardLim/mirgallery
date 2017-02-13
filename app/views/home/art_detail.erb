@@ -1,0 +1,67 @@
+<div class="container" style="margin-top:60px;min-height:100vh;">
+    <div class="main_title normal-font">
+        <h2 style="text-align:left;"><%= @art.name %></h2>
+        <a href="/home/art_edit/<%=@art.id%>">Edit</a>
+    </div>
+    <div class="art_pic first_100">
+        <%= image_tag @art.pic %>
+    </div>
+    <div class="art_describe">
+        <p><%= @art.name %></p>
+        <p><%= @art.title %></p>
+        <p><%= @art.year %></p>
+        <p><%= @art.material %></p>
+        <p><%= @art.size %></p>
+    </div>
+</div>
+
+<script>
+$(document).ready(function() {
+  var divs = document.getElementsByClassName('first_100');
+  for (var i = 0; i < divs.length; ++i) {
+    var div = divs[i];
+    var divAspect = div.offsetHeight / div.offsetWidth;
+    div.style.overflow = 'hidden';
+    
+    var img = div.querySelector('img');
+    var imgAspect = img.height / img.width;
+
+    if (imgAspect <= divAspect) {
+      // 이미지가 div보다 납작한 경우 세로를 div에 맞추고 가로는 잘라낸다
+      var imgWidthActual = div.offsetHeight / imgAspect;
+      var imgWidthToBe = div.offsetHeight / divAspect;
+      var marginLeft = -Math.round((imgWidthActual - imgWidthToBe) / 2)
+      img.style.cssText = 'width: 100%; height: auto; margin-left: '
+                      + marginLeft + 'px;'
+    } else {
+      // 이미지가 div보다 길쭉한 경우 가로를 div에 맞추고 세로를 잘라낸다
+      img.style.cssText = 'width: auto; height: 100%; margin-left: 0;';
+    }
+  }
+});
+  window.onload = function() {
+  var divs = document.getElementsByClassName('first_100');
+  for (var i = 0; i < divs.length; ++i) {
+    var div = divs[i];
+    var divAspect = div.offsetHeight / div.offsetWidth;
+    div.style.overflow = 'hidden';
+    
+    var img = div.querySelector('img');
+    var imgAspect = img.height / img.width;
+
+    if (imgAspect <= divAspect) {
+      // 이미지가 div보다 납작한 경우 세로를 div에 맞추고 가로는 잘라낸다
+      var imgWidthActual = div.offsetHeight / imgAspect;
+      var imgWidthToBe = div.offsetHeight / divAspect;
+      var marginLeft = -Math.round((imgWidthActual - imgWidthToBe) / 2)
+      img.style.cssText = 'width: 100%; height: auto; margin-left: '
+                      + marginLeft + 'px;'
+    } else {
+      // 이미지가 div보다 길쭉한 경우 가로를 div에 맞추고 세로를 잘라낸다
+      img.style.cssText = 'width: auto; height: 100%; margin-left: 0;';
+    }
+  }
+};
+ 
+ 
+</script>

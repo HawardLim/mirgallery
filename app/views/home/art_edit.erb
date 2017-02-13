@@ -1,0 +1,33 @@
+<div class="container" style="height:1100px; margin-top:70px;">
+    
+    <div class="main_title normal-font">
+        <h2>예술품 수정</h2>
+    </div>
+    <div class="inquire_div">
+      <form action= "/home/art_edit_com/<%=@gongmos.id%>" method= "POST"  enctype="multipart/form-data" accept-charset="UTF-8">
+           <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <div class="inquire_name">
+            <input type="text" value="<%=@gongmos.title%>" placeholder="제목을 입력해주세요" style="padding-left:10px;" class="inquire_name" name="title">
+        </div>
+        <div class="inquire_name">
+            <input type="text" value="<%=@gongmos.title_c%>" placeholder="중문 제목을 입력해주세요" style="padding-left:10px;" class="inquire_name" name="title_c">
+        </div>
+        <div class="inquire_name">
+            <input type="text" value="<%=@gongmos.name%>" placeholder="작가명을 입력해주세요" style="padding-left:10px;" class="inquire_name" name="name">
+        </div>
+        <div class="inquire_name">
+            <input type="text" value="<%=@gongmos.name_c%>" placeholder="중문 작가명을 입력해주세요" style="padding-left:10px;" class="inquire_name" name="name_c">
+        </div>
+        <div class="inquire_name">
+            <input type="text" value="<%=@gongmos.year%>" placeholder="제작년도를  입력해주세요" style="padding-left:10px;" class="inquire_name" name="year">
+        </div>
+        <div class="inquire_name">
+            <input type="text" value="<%=@gongmos.size%>" placeholder="작품 크기를  입력해주세요" style="padding-left:10px;" class="inquire_name" name="size">
+        </div>
+        <div class="inquire_name">
+            <input type="text" value="<%=@gongmos.material%>" placeholder="사용된 재료 이름을 입력해주세요" style="padding-left:10px;" class="inquire_name" name="material">
+        </div>
+        <button type="submit" class="btn btn-success" style="margin:10px auto">수정하기</button>
+        </form>
+    </div>
+</div>
