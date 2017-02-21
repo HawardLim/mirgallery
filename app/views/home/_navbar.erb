@@ -2,13 +2,14 @@
     <div class="container">
     <header class="head">
     <h1 class="title">
-        <a href="/home/index"><img src="/assets/새로고2.jpg"></a>
+      <a href="/home/index" onclick="goReload('/home/index')">
+        <img src="/assets/새로고2.jpg"></a>
     </h1>
     </header>
     <div class="nav normal-font">
         <a href="/home/about">ABOUT</a>
         <a href="/home/artist">ARTISTS</a>
-        <a style="width:110px;"href="/home/exhibition">EXHIBITIONS</a>
+        <a style="width:110px;" href="/home/exhibition">EXHIBITIONS</a>
         <a href="/home/news">NEWS</a>
         <a href="/home/contact">CONTACT</a>
         <a href="/home/admin">ADMIN</a>
@@ -16,6 +17,14 @@
     </div>
 </nav>
 <script>
+$('#logo').click(function(e) { e.preventDefault(); window.open(this.href); });
+function goReload() {
+location.reload();
+}
+
+</script>
+<script>
+
 $(document).ready(function() {
   var divs = document.getElementsByClassName('big_pic');
   for (var i = 0; i < divs.length; ++i) {
