@@ -219,6 +219,7 @@ class HomeController < ApplicationController
   def art_destroy
         @gongmos = Art.find(params[:id])
         @gongmos.destroy
+        redirect_to "/home/admin_artist"
   end
   def art_edit
         @gongmos = Art.find(params[:id])
@@ -226,6 +227,7 @@ class HomeController < ApplicationController
   def artist_destroy
         @gongmos = Artist.find(params[:id])
         @gongmos.destroy
+        redirect_to "/home/admin_artist"
   end
   def artist_edit
         @gongmos = Artist.find(params[:id])
@@ -233,6 +235,7 @@ class HomeController < ApplicationController
   def exhi_destroy
         @gongmos = Exhibition.find(params[:id])
         @gongmos.destroy
+        redirect_to "/home/admin_exhibition"
   end
   def exhi_edit
         @gongmos = Exhibition.find(params[:id])
@@ -240,6 +243,7 @@ class HomeController < ApplicationController
   def exhi_attachment_destroy
         @gongmos = Exhiattachment.find(params[:id])
         @gongmos.destroy
+        redirect_to "/home/admin_exhibition"
   end
   def exhi_attachment_edit
         @gongmos = Exhiattachment.find(params[:id])
@@ -247,6 +251,7 @@ class HomeController < ApplicationController
   def news_destroy
         @gongmos = New.find(params[:id])
         @gongmos.destroy
+        redirect_to "/home/admin_news"
   end
   def news_edit
         @gongmos = New.find(params[:id])
