@@ -9,17 +9,52 @@
     </div>
     <div class="exhi_content">
         <div class="artist_exhi_div">
-             <% @exhi.each do |e| %>
+            <% @exhi.each do |e| %>
              <a href="/home/exhibition_detail/<%= e.id%>">
-             <div class="artist_exhi_each" style="height:400px;">
-                  <div class="artist_exhi_each_pic first_100" style="height:350px;">
+             <div class="artist_exhi_each">
+                  <div class="artist_exhi_each_pic first_auto"> 
                   <%= image_tag e.title_pic %>
                   </div>
                   <p><%= e.name %></p>
-                  <p><small><%= e.period_sta %> ~ <%= e.period_sta %></small></p>
+                  <p><small><%= e.period_sta %> ~ <%= e.period_end %></small></p>
              </div>
              </a>
              <% end %>
         </div>
+         <div class="pagination_div"><%= will_paginate @exhi, :previous_label => t("<<"), :next_label => t(">>")%></div>
     </div>
 </div>
+<input type="hidden" id="refresh" value="no">
+<script>
+$(document).ready(function() {
+  var divs = document.getElementsByClassName('first_auto');
+  for (var i = 0; i < divs.length; ++i) {
+    var div = divs[i];
+    var divAspect = div.offsetHeight / div.offsetWidth;
+    div.style.overflow = 'hidden';
+    
+    var img = div.querySelector('img');
+    var imgAspect = img.height / img.width;
+
+    if (imgAspect <= divAspect) {
+      // 이미지가 div보다 납작한 경우 세로를 div에 맞추고 가로는 잘라낸다
+      var imgWidthActual = div.offsetHeight / imgAspect;
+      var imgWidthToBe = div.offsetHeight / divAspect;
+      var marginLeft = -Math.round((imgWidthActual - imgWidthToBe) / 2)
+      img.style.cssText = 'width: auto; height: 100%; margin-left: '
+                      + marginLeft + 'px;'
+    } else {
+      // 이미지가 div보다 길쭉한 경우 가로를 div에 맞추고 세로를 잘라낸다
+      img.style.cssText = 'width: 100%; height: auto; margin-left: 0;';
+    }
+  }
+});
+</script>   
+
+<script>
+$(document).ready(function(e) {
+    var $input = $('#refresh');
+
+    $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
+});
+</script>

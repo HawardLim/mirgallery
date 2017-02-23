@@ -264,7 +264,11 @@ src:local(※),
     width:100%;
     height:auto;
     display:inline-block;
+    color:black;
     min-height:60vh;
+    a {
+        color:black;
+    }
 }
 
 // exhibition 끝
@@ -318,6 +322,7 @@ src:local(※),
     float:left;
     position:relative;
     margin-top:20px;
+    font-weight:600;
     text-align:left;
 }
 // art_detail 끝
