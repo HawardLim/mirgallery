@@ -11,8 +11,13 @@
     <div class="sub_title" style="border-bottom:1px solid #c0c0c0;">
          <h3><%= @exhi.name %></h3>
          <p><%= @exhi.period_sta %> ~ <%= @exhi.period_end%></p>
+         <% if user_signed_in? %>
+         <% if current_user.email == "admin@naver.com"%>
          <a href="/home/exhi_attachment_write/<%=@exhi.id%>">Add Content</a> |
-         <a href="/home/exhi_edit/<%=@exhi.id%>">Edit</a>
+         <a href="/home/exhi_edit/<%=@exhi.id%>">Edit</a>|
+         <a href="/home/exhi_destroy/<%=@exhi.id%>">Delete</a>
+         <% end %>
+         <% end %>
      </div>
     </div>
     <div class="exhi_content" style="margin-bottom:50px;">

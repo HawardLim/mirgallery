@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    @mainpic = Mainpic.last
   end
   def news
     @news = New.paginate(:page => params[:page], per_page: 12).order('created_at DESC')

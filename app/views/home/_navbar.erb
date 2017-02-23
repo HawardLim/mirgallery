@@ -12,7 +12,11 @@
         <a style="width:110px;" href="/home/exhibition">EXHIBITIONS</a>
         <a href="/home/news">NEWS</a>
         <a href="/home/contact">CONTACT</a>
+        <% if user_signed_in? %>
+         <% if current_user.email == "admin@naver.com"%>
         <a href="/home/admin">ADMIN</a>
+         <% end %>
+        <% end %>
     </div>
     </div>
 </nav>

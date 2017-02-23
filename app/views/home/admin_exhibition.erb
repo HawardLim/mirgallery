@@ -1,3 +1,5 @@
+<% if user_signed_in? %>
+         <% if current_user.email == "admin@naver.com"%>
 <div class="container" style="height:800px; margin-top:80px;">
     <div class="main_title normal-font">
         <h2 style="text-align:left;">행사 관리</h2>
@@ -30,3 +32,5 @@
       <div class="pagination_div"><%= will_paginate @exhi, :previous_label => t("<<"), :next_label => t(">>")%></div>
      <div class="pagination_div"></div>
 </div>
+<% end %> 
+<% end %>

@@ -1,3 +1,5 @@
+ <% if user_signed_in? %>
+         <% if current_user.email == "admin@naver.com"%>
 <div class="container" style="height:1100px; margin-top:70px;">
     <div class="main_title normal-font">
         <h2>NEWS 작성</h2>
@@ -24,3 +26,5 @@
         </form>
     </div>
 </div>
+<% end %>
+<% end %>

@@ -1,8 +1,12 @@
 <div class="container" style="margin-top:60px;min-height:100vh;">
     <div class="main_title normal-font">
         <h2 style="text-align:left;"><%= @exhi.name %></h2>
+        <% if user_signed_in? %>
+         <% if current_user.email == "admin@naver.com"%>
         <a href="/home/exhi_attachment_edit/<%=@exhi.id%>">Edit</a>|
         <a href="/home/exhi_attachment_destroy/<%=@exhi.id%>">Delete</a>
+        <% end %>
+        <% end %>
     </div>
     <div class="art_pic first_100" style="margin-bottom:80px;">
         <%= image_tag @attach.pic %>

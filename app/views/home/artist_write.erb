@@ -1,3 +1,5 @@
+<% if user_signed_in? %>
+         <% if current_user.email == "admin@naver.com"%>
 <div class="container" style="min-height:1100px; margin-top:70px;">
    <div class="main_title normal-font" >
         <h2 style="text-align:left;">아티스트 추가</h2>
@@ -24,3 +26,5 @@
          </div>
      </form>
 </div>
+<% end %>
+<% end %>
