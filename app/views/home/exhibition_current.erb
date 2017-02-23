@@ -11,8 +11,8 @@
         <div class="artist_exhi_div">
              <% @exhi.each do |e| %>
              <a href="/home/exhibition_detail/<%= e.id%>">
-             <div class="artist_exhi_each">
-                 <div class="artist_exhi_each_pic first_100">
+             <div class="artist_exhi_each" style="height:400px;">
+                  <div class="artist_exhi_each_pic first_100" style="height:350px;">
                   <%= image_tag e.title_pic %>
                   </div>
                   <p><%= e.name %></p>
