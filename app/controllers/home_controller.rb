@@ -43,6 +43,7 @@ class HomeController < ApplicationController
     @uploader6.store!(file6)
     @event.pic6 = @uploader6.url
     @event.save
+    redirect_to "/home/index"
   end
   def artist_upload
     @event = Artist.new
