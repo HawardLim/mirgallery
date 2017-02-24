@@ -9,7 +9,7 @@ class HomeController < ApplicationController
     @news = New.paginate(:page => params[:page], per_page: 12).order('created_at DESC')
   end
   def admin_main 
-    @main = Main.paginate(:page => params[:page], per_page: 12).order('created_at DESC')
+    @main = Mainpic.paginate(:page => params[:page], per_page: 12).order('created_at DESC')
   end
   def news_detail
     @news = New.find(params[:id])
